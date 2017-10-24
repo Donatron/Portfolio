@@ -1,1 +1,45 @@
+:root {
+  --colorPrim: #10141f;
+  --white: #fff;
+}
 
+
+/******************************
+BASE STYLES
+******************************/
+
+img#logo {
+  height: 100px;
+  width: auto;
+}
+
+/******************************
+NAVIGATION
+******************************/
+
+.navbar {
+  background-color: var(--colorPrim);
+}
+
+a {
+  color: var(--white);
+  font-weight: lighter;
+}
+
+button.navbar-toggler {
+  color: var(--white);
+}
+
+/******************************
+JUMBOTRON
+******************************/
+
+.jumbotron {
+  background-image: url('src/img/cover-photo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.devicon {
+  font-size: 80px;
+}
