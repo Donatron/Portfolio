@@ -35,7 +35,9 @@ JUMBOTRON
 ******************************/
 
 .jumbotron {
-  background-image: url('src/img/cover-photo.jpg');
+  background-image: linear-gradient(rgba(20,20,20, 1),
+                    rgba(20,20,20, 1)),
+                    url('src/img/cover-photo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
