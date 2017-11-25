@@ -35,8 +35,8 @@ JUMBOTRON
 ******************************/
 
 .jumbotron {
-  background-image: linear-gradient(rgba(20,20,20, 1),
-                    rgba(20,20,20, 1)),
+  background-image: linear-gradient(rgba(20,20,20, 0.1),
+                    rgba(20,20,20, 0.7)),
                     url('src/img/cover-photo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -44,4 +44,22 @@ JUMBOTRON
 
 .devicon {
   font-size: 80px;
+}
+
+/******************************
+PORTFOLIO
+******************************/
+
+.portfolio-item {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #666;
+  opacity: 0.5;
 }
