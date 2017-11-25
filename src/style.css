@@ -60,6 +60,19 @@ PORTFOLIO
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #666;
-  opacity: 0.5;
+  background-color: rgba(100, 100, 100, 0.5);
+}
+
+.portfolio-details {
+  color: white;
+  height: 50%;
+}
+
+.portfolio-details li {
+  list-style: none;
+}
+
+.portfolio-details a {
+  text-decoration: none;
+  color: inherit;
 }
