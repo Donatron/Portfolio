@@ -6,6 +6,7 @@ var imagemin = require('gulp-imagemin');
 var cssnano = require('cssnano');
 var cssnext = require('postcss-cssnext');
 var browserSync = require('browser-sync');
+var browserify = require('browserify');
 
 // Process CSS
 gulp.task('css', function() {
@@ -33,6 +34,9 @@ gulp.task('dev', ['browserSync'], function() {
   gulp.watch('src/*.css', browserSync.reload);
   gulp.watch('*.html', browserSync.reload);
 });
+
+// Browserify for using Node.js in the browser
+var bundle = browserify('./src/app.js').bundle();
 
 // Default task
 gulp.task('default', function() {
