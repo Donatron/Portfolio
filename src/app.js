@@ -1,4 +1,4 @@
-const https = require('https');
+// const https = require('https');
 console.log("Hey dude");
 
 
@@ -12,33 +12,19 @@ console.log("Hey dude");
 //   }
 // );
 
-try {
-const request = https.get('https://teamtreehouse.com/donmacarthur.json', response => {
-  if (response.statusCode === 200) {
-                                    let body = "";
-                                    // Read the data
-                                    response.on('data', data => {
-                                      body += data.toString();
-                                    });
+$.getJSON({
+  url: "https://teamtreehouse.com/donmacarthur.json",
+  context: document.body
+}).done(function($response) {
 
-                                    response.on('end', () => {
-                                      try {
-                                        // Parse the data
-                                        const profile = JSON.parse(body);
-                                        // Print the data
-                                        console.log(profile.badges.length);
+  $values = Object.values($response.points);
+  $keys = Object.keys($response.points);
 
-for  (const points in profile.points.sum) {
-  console.log(points);
-}
+  for($key in $keys) {
 
-                                      } catch (error){
-                                        console.log(error);
-                                      }
-                                    });
-                                  }
+      console.log("I have earned " + $values[$key] + " points in " + $keys[$key]);
+
+  }
+
 
 });
-} catch (error) {
-  console.log(error);
-}
