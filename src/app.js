@@ -9,18 +9,19 @@
 // );
 
 function createBadgesHTML($badge, $name, $course, $url) {
-  let html = '<div class="card col-6 col-md-3" style="width: 20rem;">';
-  html += '<img class="card-img-top" ';
+  let html = '<div class="card col-6 col-md-3 badges" style="width: 20rem;">';
+
+  html += '<img class="card-img-top treehouse-badge" ';
   html += 'src="' + $badge + '" ';
   html += 'alt="Image for Treehouse "' + $name + '" badge">';
-  html += '<div class="card-body">';
+  html += '<div class="card-body text-center">';
   html += '<h4 class="card-title">Badge Name:</h4>';
   html += '<p>' + $name + '</p>';
   html += '<h4>Course:</h4>';
   html += '<p>' + $course + '</p>';
-  html += '<a href="' + $url + '" target="_blank"';
-  html += 'class="btn btn-primary">View Course</a>';
   html += '</div>';
+  html += '<a href="' + $url + '" target="_blank"';
+  html += 'class="btn btn-outline-info btn-badges mb-5">View Course</a>';
   html += '</div>';
 
   return html;
