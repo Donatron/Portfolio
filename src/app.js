@@ -8,12 +8,18 @@
 //   }
 // );
 
-function createBadgesHTML() {
+function createBadgesHTML($badge, $name, $course, $url) {
   let html = '<div class="card col-6 col-md-3" style="width: 20rem;">';
-  html += '<img class="card-img-top" src="https://achievement-images.teamtreehouse.com/bagdes_html_howtobuildawebsite_stage02.png" alt="Card image cap">';
+  html += '<img class="card-img-top" ';
+  html += 'src="' + $badge + '" ';
+  html += 'alt="Image for Treehouse "' + $name + '" badge">';
   html += '<div class="card-body">';
-  html += '<h4 class="card-title">Here is my card</h4>';
-  html += '<a href="#" class="btn btn-primary">Check it out</a>';
+  html += '<h4 class="card-title">Badge Name:</h4>';
+  html += '<p>' + $name + '</p>';
+  html += '<h4>Course:</h4>';
+  html += '<p>' + $course + '</p>';
+  html += '<a href="' + $url + '" target="_blank"';
+  html += 'class="btn btn-primary">View Course</a>';
   html += '</div>';
   html += '</div>';
 
@@ -35,8 +41,12 @@ $.getJSON({
   for(let i=1; i<=8; i++) {
     $index = getIndex($response.badges.length);
     // console.log('Donatron was awarded the ' + $response.badges[$index].name + ' Badge in the ' + $response.badges[$index].courses[0].title + ' course.');
+    $badgeImage = $response.badges[$index].icon_url;
+    $badgeName = $response.badges[$index].name;
+    $course = $response.badges[$index].courses[0].title;
+    $courseURL = $response.badges[$index].url;
 
-    $badgeHTML = createBadgesHTML();
+    $badgeHTML = createBadgesHTML($badgeImage, $badgeName, $course, $courseURL);
 
     console.log($badgeHTML);
     $('#badges').append($badgeHTML);
