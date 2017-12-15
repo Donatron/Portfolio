@@ -78,7 +78,7 @@ PORTFOLIO
 }
 
 /******************************
-TREEHOUSE BADGES
+TREEHOUSE BADGES / POINTS
 ******************************/
 
 .treehouse-link {
@@ -98,6 +98,12 @@ TREEHOUSE BADGES
   margin-right: auto;
 }
 
-.badges h4 {
+.badges h4,
+#points h4 {
   font-size: 1.2rem;
+}
+
+#points,
+.points-container {
+  display: inline;
 }
