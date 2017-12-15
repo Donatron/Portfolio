@@ -8,6 +8,18 @@
 //   }
 // );
 
+function createBadgesHTML() {
+  let html = '<div class="card col-6 col-md-3" style="width: 20rem;">';
+  html += '<img class="card-img-top" src="https://achievement-images.teamtreehouse.com/bagdes_html_howtobuildawebsite_stage02.png" alt="Card image cap">';
+  html += '<div class="card-body">';
+  html += '<h4 class="card-title">Here is my card</h4>';
+  html += '<a href="#" class="btn btn-primary">Check it out</a>';
+  html += '</div>';
+  html += '</div>';
+
+  return html;
+}
+
 $.getJSON({
   url: "https://teamtreehouse.com/donmacarthur.json",
   context: document.body
@@ -22,7 +34,12 @@ $.getJSON({
   // Find 8 random Badges
   for(let i=1; i<=8; i++) {
     $index = getIndex($response.badges.length);
-    console.log('Donatron was awarded the ' + $response.badges[$index].name + ' Badge in the ' + $response.badges[$index].courses[0].title + ' course.');
+    // console.log('Donatron was awarded the ' + $response.badges[$index].name + ' Badge in the ' + $response.badges[$index].courses[0].title + ' course.');
+
+    $badgeHTML = createBadgesHTML();
+
+    console.log($badgeHTML);
+    $('#badges').append($badgeHTML);
   }
 
   $values = Object.values($response.points);
