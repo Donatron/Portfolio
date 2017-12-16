@@ -1,12 +1,8 @@
-//   $('.overlay').hide();
-//
-//   // Show portfolio image overlays
-//   $('.portfolio-item').hover(function() {
-//     $(this).children('.overlay').show();
-//   }, function() {
-//     $(this).children('.overlay').hide();
-//   }
-// );
+
+var date = new Date();
+var year = date.getFullYear();
+
+$('#date').append(year);
 
 function createBadgesHeadingHTML($total) {
   let $html = '<p class="col-12 text-center">';
@@ -102,7 +98,7 @@ $.getJSON({
     }
 
   }
-  
+
   console.log('Total points are: ' + $totalPoints);
 
 });
