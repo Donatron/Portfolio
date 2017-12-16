@@ -7,6 +7,15 @@ $('#date').append(year);
 // Set portfolio image overlays to hidden
 $('.overlay').hide();
 
+// Fix Bootstrap hamburger menu toggle
+$('.navbar-toggler-icon').click(function() {
+  $('#myNavbar').toggle('collapse');
+});
+
+$('.nav-link').click(function() {
+  $('#myNavbar').toggle('collapse');
+});
+
 function createBadgesHeadingHTML($total) {
   let $html = '<p class="col-12 text-center">';
 
