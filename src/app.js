@@ -4,6 +4,9 @@ var year = date.getFullYear();
 
 $('#date').append(year);
 
+// Set portfolio image overlays to hidden
+$('.overlay').hide();
+
 function createBadgesHeadingHTML($total) {
   let $html = '<p class="col-12 text-center">';
 

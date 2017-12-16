@@ -57,11 +57,12 @@ PORTFOLIO
 
 .overlay {
   position: absolute;
-  top: 0;
+  top: 70%;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(100, 100, 100, 0.5);
+  background-color: var(--colorPrim);
+  opacity: 0.9;
 }
 
 .portfolio-details {
