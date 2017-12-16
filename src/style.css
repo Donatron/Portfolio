@@ -1,5 +1,6 @@
 :root {
   --colorPrim: #17a2b8;
+  --colorSec: #026877;
   --white: #fff;
 }
 
@@ -18,17 +19,34 @@ NAVIGATION
 ******************************/
 
 .navbar {
-  background-color: var(--colorPrim);
-  opacity: 0.8;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-a {
-  color: var(--white);
+.nav-item,
+.hamburger {
+  color: var(--colorPrim) !important;
   font-weight: lighter;
+}
+
+.hamburger {
+  width: 100px;
+  height: 6px;
+  border-radius: 2px;
+  display: inline;
 }
 
 button.navbar-toggler {
   color: var(--white);
+}
+
+
+.navbar-toggler-icon {
+  background-image: url('./src/img/hamburger-menu.svg') !important;
+}
+
+.svg {
+  fill: red !important;
 }
 
 /******************************
@@ -36,11 +54,12 @@ JUMBOTRON
 ******************************/
 
 .jumbotron {
-  background-image: linear-gradient(rgba(20,20,20, 0.1),
-                    rgba(20,20,20, 0.7)),
+  background-image: linear-gradient(rgba(255,255,255, 0.1)50%,
+                    rgba(23, 162, 184, 0.6)),
                     url('src/img/cover-photo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .devicon {
@@ -55,7 +74,7 @@ PORTFOLIO
   position: relative;
 }
 
-.overlay {
+.portfolio-overlay {
   position: absolute;
   top: 70%;
   bottom: 0;

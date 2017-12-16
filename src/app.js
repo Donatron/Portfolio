@@ -5,10 +5,10 @@ var year = date.getFullYear();
 $('#date').append(year);
 
 // Set portfolio image overlays to hidden
-$('.overlay').hide();
+$('.portfolio-overlay').hide();
 
 // Fix Bootstrap hamburger menu toggle
-$('.navbar-toggler-icon').click(function() {
+$('.nav-toggler').click(function() {
   $('#myNavbar').toggle('collapse');
 });
 
