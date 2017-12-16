@@ -1,5 +1,5 @@
 :root {
-  --colorPrim: #10141f;
+  --colorPrim: #17a2b8;
   --white: #fff;
 }
 
@@ -19,6 +19,7 @@ NAVIGATION
 
 .navbar {
   background-color: var(--colorPrim);
+  opacity: 0.8;
 }
 
 a {
@@ -122,4 +123,13 @@ TREEHOUSE BADGES / POINTS
 .contact-detail p {
   display: inline-block;
   vertical-align: middle;
+}
+
+/******************************
+FOOTER
+******************************/
+
+.footer {
+  background-color: var(--colorPrim);
+  opacity: 0.8;
 }
