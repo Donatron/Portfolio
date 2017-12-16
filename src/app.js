@@ -36,7 +36,7 @@ function createBadgesHTML($badge, $name, $course, $url) {
 }
 
 function createPointsHTML($language, $points) {
-  $html = '<div class="points-container text-center">';
+  $html = '<div class="col-6 col-md-3 text-center mb-3">';
   $html += '<h4>' + $language + '</h4>';
   $html += '<p>' + $points + ' points</p>';
   $html += '</div>';
@@ -95,13 +95,8 @@ $.getJSON({
       $pointsHTML = createPointsHTML($language, $points);
       $('#points').append($pointsHTML);
 
-      // Calculate total points earned
-      $totalPoints += $points;
-
     }
 
   }
-
-  console.log('Total points are: ' + $totalPoints);
 
 });

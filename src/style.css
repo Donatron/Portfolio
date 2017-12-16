@@ -106,10 +106,10 @@ TREEHOUSE BADGES / POINTS
   font-size: 1.2rem;
 }
 
-#points,
+/* #points,
 .points-container {
   display: inline;
-}
+} */
 
 .fa {
   font-size: 50px;
