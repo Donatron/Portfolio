@@ -15,9 +15,6 @@ $('.nav-link').click(function(e) {
   e.preventDefault();
 });
 
-// Set portfolio image overlays to hidden
-$('.portfolio-overlay').hide();
-
 // Fix Bootstrap hamburger menu toggle
 $('.nav-toggler').click(function() {
   $('#myNavbar').toggle('collapse');

@@ -74,21 +74,33 @@ PORTFOLIO
 
 .portfolio-overlay {
   position: absolute;
-  top: 70%;
+  top: 99%;
   bottom: 0;
   left: 0;
   right: 0;
   background-color: var(--colorPrim);
   opacity: 0.9;
+
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(.62,0,.52,1);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  top: 0;
 }
 
 .portfolio-details {
   color: white;
-  height: 50%;
+}
+
+.portfolio-details h3,
+.portfolio-details h6 {
+  font-size: 1em !important;
 }
 
 .portfolio-details li {
   list-style: none;
+  font-size: 0.75em;
 }
 
 .portfolio-details a {
