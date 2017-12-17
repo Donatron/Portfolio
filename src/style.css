@@ -2,6 +2,10 @@
   --colorPrim: #17a2b8;
   --colorSec: #026877;
   --white: #fff;
+  --grey: #333;
+
+  --fontPrim: 'Nunito', sans-serif;
+  --fontSec: 'Lora', serif;
 }
 
 
@@ -9,9 +13,14 @@
 BASE STYLES
 ******************************/
 
-img#logo {
-  height: 100px;
-  width: auto;
+body {
+  color: var(--grey);
+  font-family: var(--fontSec) !important;
+}
+
+h1 {
+  font-family: var(--fontPrim);
+  text-shadow: 1px 1px 5px 5px var(--colorSec);
 }
 
 /******************************
@@ -23,30 +32,19 @@ NAVIGATION
   padding-bottom: 0;
 }
 
-.nav-item,
-.hamburger {
+.nav-item {
   color: var(--colorPrim) !important;
+  font-family: var(--fontPrim);
   font-weight: lighter;
-}
-
-.hamburger {
-  width: 100px;
-  height: 6px;
-  border-radius: 2px;
-  display: inline;
 }
 
 button.navbar-toggler {
   color: var(--white);
 }
 
-
-.navbar-toggler-icon {
-  background-image: url('./src/img/hamburger-menu.svg') !important;
-}
-
-.svg {
-  fill: red !important;
+.nav-toggler {
+  color: var(--colorPrim);
+  font-size: 50px !important;
 }
 
 /******************************
@@ -152,4 +150,12 @@ FOOTER
 .footer {
   background-color: var(--colorPrim);
   opacity: 0.8;
+}
+
+.contact-detail a {
+  color: var(--colorPrim) !important;
+}
+
+.contact-detail a:hover {
+  opacity: 0.6;
 }

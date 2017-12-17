@@ -4,6 +4,17 @@ var year = date.getFullYear();
 
 $('#date').append(year);
 
+// Add smooth scrolling
+$('.nav-link').click(function(e) {
+  var linkHref = $(this).attr('href');
+
+  $('html, body').animate({
+    scrollTop: $(linkHref).offset().top - 30
+  }, 1000);
+
+  e.preventDefault();
+});
+
 // Set portfolio image overlays to hidden
 $('.portfolio-overlay').hide();
 
