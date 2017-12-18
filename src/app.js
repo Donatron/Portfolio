@@ -46,7 +46,7 @@ function createBadgesHTML($badge, $name, $course, $url) {
   $html += '<p>' + $course + '</p>';
   $html += '</div>';
   $html += '<a href="' + $url + '" target="_blank"';
-  $html += 'class="btn btn-outline-info btn-badges mb-5">View Course</a>';
+  $html += 'class="btn btn-outline-info btn-badges mb-5 mx-2">View Course</a>';
   $html += '</div>';
 
   return $html;
