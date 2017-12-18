@@ -134,11 +134,6 @@ TREEHOUSE BADGES / POINTS
   font-size: 1.2rem;
 }
 
-/* #points,
-.points-container {
-  display: inline;
-} */
-
 .fa {
   font-size: 50px;
   padding-top: 0;
@@ -152,6 +147,15 @@ TREEHOUSE BADGES / POINTS
 .contact-detail p {
   display: inline-block;
   vertical-align: middle;
+}
+
+/******************************
+BADGES PAGE
+******************************/
+
+#badges-heading p a {
+  color: var(--colorPrim);
+  text-decoration: none;
 }
 
 /******************************

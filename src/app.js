@@ -29,6 +29,7 @@ function createBadgesHeadingHTML($total) {
 
   $html += 'These are some of the ' + $total + ' badges I have received for my achievements with ';
   $html += '<a href="https://teamtreehouse.com" class="treehouse-link">Team Treehouse</a> so far</p>';
+  $html += '<p class="col-12 text-center">Click <a href="badges.html">here</a> to see all my badges</p>';
 
   return $html;
 }
@@ -61,61 +62,88 @@ function createPointsHTML($language, $points) {
   return $html;
 }
 
-$.getJSON({
-  url: "https://teamtreehouse.com/donmacarthur.json",
-  context: document.body
-}).done(function($response) {
-  // Hide loading spinners
-  $('.loading-spinner').hide();
+try {
+  $.getJSON({
+    url: "https://teamtreehouse.com/donmacarthur.json",
+    context: document.body
+  }).done(function($response) {
+    // Hide loading spinners
+    $('.loading-spinner').hide();
 
-  // Find total number of badges for output to section description
-  $totalBadges = $response.badges.length;
-  $headingHTML = createBadgesHeadingHTML($totalBadges);
+    try {
 
-  $('#badges-heading').append($headingHTML);
+      // Find total number of badges for output to section description
+      $totalBadges = $response.badges.length;
+      $headingHTML = createBadgesHeadingHTML($totalBadges);
 
-  // Generate Random Index Number for displaying random badges
-  function getIndex($length) {
-    $index = Math.floor(Math.random() * $length) + 1;
-    return $index;
-  }
+      $('#badges-heading').append($headingHTML);
 
-  // Find and display 8 random Badges
-  for(let i=1; i<=8; i++) {
-    $index = getIndex($response.badges.length);
+    } catch (error) {
+      console.log('There is an error here: ' + error);
+    }
 
-    // Declare variables for badge properties
-    $badgeImage = $response.badges[$index].icon_url;
-    $badgeName = $response.badges[$index].name;
-    $course = $response.badges[$index].courses[0].title;
-    $courseURL = $response.badges[$index].url;
+    // Generate Random Index Number for displaying random badges
+    function getIndex($length) {
+      $index = Math.floor(Math.random() * $length) + 1;
+      return $index;
+    }
 
-    $badgeHTML = createBadgesHTML($badgeImage, $badgeName, $course, $courseURL);
+    // Find and display 8 random Badges
+    for(let i=1; i<=8; i++) {
+      $index = getIndex($response.badges.length);
 
-    //Append badges to HTML div
-    $('#badges').append($badgeHTML);
-  }
+      // Declare variables for badge properties
+      $badgeImage = $response.badges[$index].icon_url;
+      $badgeName = $response.badges[$index].name;
+      $course = $response.badges[$index].courses[0].title;
+      $courseURL = $response.badges[$index].url;
 
-  // Declare key/value pairs for Treehouse points earned
-  $values = Object.values($response.points);
-  $keys = Object.keys($response.points);
-  $totalPoints = 0;
+      $badgeHTML = createBadgesHTML($badgeImage, $badgeName, $course, $courseURL);
 
-  for($key in $keys) {
+      //Append badges to HTML div
+      $('#badges').append($badgeHTML);
+    }
 
-    // Filter out points less than 1000
-    if($values[$key] > 1000 && $keys[$key] != 'total') {
+    // Append all badges to badges.html page
+    for(let i=1; i<=$response.badges.length; i++) {
+      $index = getIndex($response.badges.length);
 
-      // Declare points variables
-      $language = $keys[$key];
-      $points = $values[$key];
+      // Declare variables for badge properties
+      $badgeImage = $response.badges[$index].icon_url;
+      $badgeName = $response.badges[$index].name;
+      $course = $response.badges[$index].courses[0].title;
+      $courseURL = $response.badges[$index].url;
 
-      // Append points earned details to HTML div
-      $pointsHTML = createPointsHTML($language, $points);
-      $('#points').append($pointsHTML);
+      $badgeHTML = createBadgesHTML($badgeImage, $badgeName, $course, $courseURL);
+
+      //Append badges to HTML div
+      $('#my-badges').append($badgeHTML);
+    }
+
+    // Declare key/value pairs for Treehouse points earned
+    $values = Object.values($response.points);
+    $keys = Object.keys($response.points);
+    $totalPoints = 0;
+
+    for($key in $keys) {
+
+      // Filter out points less than 1000
+      if($values[$key] > 1000 && $keys[$key] != 'total') {
+
+        // Declare points variables
+        $language = $keys[$key];
+        $points = $values[$key];
+
+        // Append points earned details to HTML div
+        $pointsHTML = createPointsHTML($language, $points);
+        $('#points').append($pointsHTML);
+
+      }
 
     }
 
-  }
+  });
 
-});
+} catch(error) {
+  console.log('This line is evaluating');
+}
