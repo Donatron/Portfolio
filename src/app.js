@@ -65,6 +65,8 @@ $.getJSON({
   url: "https://teamtreehouse.com/donmacarthur.json",
   context: document.body
 }).done(function($response) {
+  // Hide loading spinners
+  $('.loading-spinner').hide();
 
   // Find total number of badges for output to section description
   $totalBadges = $response.badges.length;
