@@ -144,6 +144,10 @@ TREEHOUSE BADGES / POINTS
   font-size: 30px;
 }
 
+.fa-spinner {
+  color: var(--colorPrim);
+}
+
 .contact-detail p {
   display: inline-block;
   vertical-align: middle;
