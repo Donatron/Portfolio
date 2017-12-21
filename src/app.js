@@ -106,14 +106,13 @@ $(document).ready(function() {
       }
 
       // Append all badges to badges.html page
-      for(let i=1; i<=$response.badges.length; i++) {
-        $index = getIndex($response.badges.length);
+      for(let i=1; i<$response.badges.length; i++) {
 
         // Declare variables for badge properties
-        $badgeImage = $response.badges[$index].icon_url;
-        $badgeName = $response.badges[$index].name;
-        $course = $response.badges[$index].courses[0].title;
-        $courseURL = $response.badges[$index].url;
+        $badgeImage = $response.badges[i].icon_url;
+        $badgeName = $response.badges[i].name;
+        $course = $response.badges[i].courses[0].title;
+        $courseURL = $response.badges[i].url;
 
         $badgeHTML = createBadgesHTML($badgeImage, $badgeName, $course, $courseURL);
 
