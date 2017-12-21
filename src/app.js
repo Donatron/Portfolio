@@ -149,38 +149,38 @@ $(document).ready(function() {
   }
 
   // Init Scroll ScrollMagic
-  var controller = new ScrollMagic.Controller();
-
-  // Pin title section
-  var pinTitleScene = new ScrollMagic.Scene({
-    triggerElement: '.jumbotron',
-    triggerHook: 0,
-    duration: '13%'
-  }).setPin('.jumbotron', {pushFollowers: false})
-  .addTo(controller);
-
-  // Pin About Me
-  var pinAboutMe = new ScrollMagic.Scene({
-    triggerElement: '#about',
-    triggerHook: 0,
-    duration: '10%'
-  }).setPin('#about', {pushFollowers: true})
-  .addTo(controller);
-
-  // Pin Skills
-  var pinSkills = new ScrollMagic.Scene({
-    triggerElement: '#skills',
-    triggerHook: 0,
-    duration: '10%'
-  }).setPin('#skills', {pushFollowers: true})
-  .addTo(controller);
-
-  // Pin Currently Exploring
-  var pinExploring = new ScrollMagic.Scene({
-    triggerElement: '#exploring',
-    triggerHook: 0,
-    duration: '10%'
-  }).setPin('#exploring', {pushFollowers: true})
-  .addTo(controller);
-
-});
+//   var controller = new ScrollMagic.Controller();
+//
+//   // Pin title section
+//   var pinTitleScene = new ScrollMagic.Scene({
+//     triggerElement: '.jumbotron',
+//     triggerHook: 0,
+//     duration: '13%'
+//   }).setPin('.jumbotron', {pushFollowers: false})
+//   .addTo(controller);
+//
+//   // Pin About Me
+//   var pinAboutMe = new ScrollMagic.Scene({
+//     triggerElement: '#about',
+//     triggerHook: 0,
+//     duration: '10%'
+//   }).setPin('#about', {pushFollowers: true})
+//   .addTo(controller);
+//
+//   // Pin Skills
+//   var pinSkills = new ScrollMagic.Scene({
+//     triggerElement: '#skills',
+//     triggerHook: 0,
+//     duration: '10%'
+//   }).setPin('#skills', {pushFollowers: true})
+//   .addTo(controller);
+//
+//   // Pin Currently Exploring
+//   var pinExploring = new ScrollMagic.Scene({
+//     triggerElement: '#exploring',
+//     triggerHook: 0,
+//     duration: '10%'
+//   }).setPin('#exploring', {pushFollowers: true})
+//   .addTo(controller);
+//
+// });
