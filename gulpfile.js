@@ -7,6 +7,7 @@ var cssnano = require('cssnano');
 var cssnext = require('postcss-cssnext');
 var browserSync = require('browser-sync');
 var browserify = require('browserify');
+var minify = require('gulp-minify');
 
 // Process CSS
 gulp.task('css', function() {
@@ -19,6 +20,30 @@ gulp.task('css', function() {
         .pipe(gulp.dest('./'));
 });
 
+//Process JavaScript
+gulp.task('js', function() {
+  gulp.src('src/*.js')
+    .pipe(minify({
+        ext:{
+            src:'-debug.js',
+            min:'.js'
+        }
+    }))
+    .pipe(gulp.dest('./'))
+});
+
+//Minimise images
+gulp.task('imagemin', function() {
+  gulp.src(['src/img/*', 'src/img/*/*'])
+  .pipe(imagemin([
+    imagemin.gifsicle({interlaced: true}),
+    imagemin.jpegtran({progressive: true}),
+    imagemin.optipng({optimizationLevel: 5}),
+    imagemin.svgo({plugins: [{removeViewBox: true}]})
+  ]))
+  .pipe(gulp.dest('img'))
+});
+
 // Configure the browserSync task
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -26,7 +51,7 @@ gulp.task('browserSync', function() {
       baseDir: ''
     },
   })
-})
+});
 
 // Dev task with browserSync
 gulp.task('dev', ['browserSync'], function() {
@@ -41,4 +66,5 @@ var bundle = browserify('./src/app.js').bundle();
 // Default task
 gulp.task('default', function() {
   gulp.watch('./src/*.css', ['css']);
+  gulp.watch('./src/*.js', ['js']);
 });
