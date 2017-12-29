@@ -95,6 +95,7 @@ PORTFOLIO
 .portfolio-details h3,
 .portfolio-details h6 {
   font-size: 1em !important;
+  margin: auto;
 }
 
 .portfolio-details li {
