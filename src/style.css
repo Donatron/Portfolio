@@ -3,6 +3,7 @@
   --colorSec: #026877;
   --white: #fff;
   --grey: #333;
+  --lightGrey: #ccc;
 
   --fontPrim: 'Nunito', sans-serif;
   --fontSec: 'Lora', serif;
@@ -57,6 +58,8 @@ JUMBOTRON
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+
+  z-index: 1;
 }
 
 .devicon {
@@ -128,11 +131,33 @@ TREEHOUSE BADGES / POINTS
   width: 100px;
   margin-left: auto;
   margin-right: auto;
+
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(.62,0,.52,1);
+}
+
+.treehouse-points {
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(.62,0,.52,1);
+}
+
+.treehouse-badge:hover {
+  opacity: 0.6;
+}
+
+.treehouse-points:hover {
+  background-color: var(--lightGrey);
+  color: var(--colorPrim);
+}
+
+.treehouse-points h4{
+  padding-top: 10px;
 }
 
 .badges h4,
 #points h4 {
   font-size: 1.2rem;
+  margin-top: auto;
 }
 
 .fa {

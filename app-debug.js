@@ -55,7 +55,7 @@ $(document).ready(function() {
   }
 
   function createPointsHTML($language, $points) {
-    $html = '<div class="col-6 col-md-3 text-center mb-3">';
+    $html = '<div class="col-6 col-md-3 text-center mb-3 treehouse-points">';
     $html += '<h4>' + $language + '</h4>';
     $html += '<p>' + $points + ' points</p>';
     $html += '</div>';
@@ -149,31 +149,31 @@ $(document).ready(function() {
   }
 
   // Init Scroll ScrollMagic
-//   var controller = new ScrollMagic.Controller();
-//
-//   // Pin title section
-//   var pinTitleScene = new ScrollMagic.Scene({
-//     triggerElement: '.jumbotron',
-//     triggerHook: 0,
-//     duration: '13%'
-//   }).setPin('.jumbotron', {pushFollowers: false})
-//   .addTo(controller);
-//
-//   // Pin About Me
-//   var pinAboutMe = new ScrollMagic.Scene({
-//     triggerElement: '#about',
-//     triggerHook: 0,
-//     duration: '10%'
-//   }).setPin('#about', {pushFollowers: true})
-//   .addTo(controller);
-//
-//   // Pin Skills
-//   var pinSkills = new ScrollMagic.Scene({
-//     triggerElement: '#skills',
-//     triggerHook: 0,
-//     duration: '10%'
-//   }).setPin('#skills', {pushFollowers: true})
-//   .addTo(controller);
+  // var controller = new ScrollMagic.Controller();
+  //
+  // // Pin title section
+  // var pinTitleScene = new ScrollMagic.Scene({
+  //   triggerElement: '.jumbotron',
+  //   triggerHook: 0,
+  //   duration: '60%'
+  // }).setPin('.jumbotron', {pushFollowers: false})
+  // .addTo(controller);
+
+  // // Pin About Me
+  // var pinAboutMe = new ScrollMagic.Scene({
+  //   triggerElement: '#about',
+  //   triggerHook: 0,
+  //   duration: '10%'
+  // }).setPin('#about', {pushFollowers: true})
+  // .addTo(controller);
+
+  // Pin Skills
+  // var pinSkills = new ScrollMagic.Scene({
+  //   triggerElement: '#skills',
+  //   triggerHook: 0.5,
+  //   duration: '10%'
+  // }).setPin('#skills', {pushFollowers: true})
+  // .addTo(controller);
 //
 //   // Pin Currently Exploring
 //   var pinExploring = new ScrollMagic.Scene({
