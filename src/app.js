@@ -25,13 +25,14 @@ $(document).ready(function() {
     $('#myNavbar').toggle('collapse');
   });
 
+  $('#myNavbar').sticky({
+    topSpacing: -100
+  })
 
-  // Make Jumbotron heading sticky to top of page
-  $('.jumbotron').sticky({
-    topSpacing: -160,
-    getWidthFrom: '.jumbotron',
-    responsiveWidth: true
+  $('#myNavbar').on('sticky-start', function() {
+    $('#myNavbar').css('background-color', 'pink');
   });
+
 
   // Create functions to build HTML elements for displaying Treehouse badge and points information
   function createBadgesHeadingHTML($total) {
@@ -64,7 +65,7 @@ $(document).ready(function() {
   }
 
   function createPointsHTML($language, $points) {
-    $html = '<div class="col-6 col-md-3 text-center mb-3 treehouse-points">';
+    $html = '<div class="col-6 col-md-4 text-center mb-3 treehouse-points">';
     $html += '<h4>' + $language + '</h4>';
     $html += '<p>' + $points + ' points</p>';
     $html += '</div>';
