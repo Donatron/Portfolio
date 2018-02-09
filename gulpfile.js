@@ -22,7 +22,7 @@ gulp.task('css', function() {
 
 //Process JavaScript
 gulp.task('js', function() {
-  gulp.src('src/*.js')
+  gulp.src('src/js/*.js')
     .pipe(minify({
         ext:{
             src:'-debug.js',
@@ -61,10 +61,10 @@ gulp.task('dev', ['browserSync'], function() {
 });
 
 // Browserify for using Node.js in the browser
-var bundle = browserify('./src/app.js').bundle();
+var bundle = browserify('./src/js/app.js').bundle();
 
 // Default task
 gulp.task('default', function() {
   gulp.watch('./src/*.css', ['css']);
-  gulp.watch('./src/*.js', ['js']);
+  gulp.watch('./src/js/*.js', ['js']);
 });
