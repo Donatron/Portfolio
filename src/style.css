@@ -195,6 +195,10 @@ BADGES PAGE
   text-decoration: none;
 }
 
+#my-badges {
+  padding-bottom: 6rem;
+}
+
 .wrapper {
   min-height: 100vh;
   position: relative;
