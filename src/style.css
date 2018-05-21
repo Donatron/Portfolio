@@ -134,6 +134,21 @@ PORTFOLIO
 }
 
 /******************************
+SkillS
+******************************/
+
+.skills-card {
+  padding-top: 10px;
+}
+
+.skills-card:hover {
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+  background-color: rgba(23, 162, 186, 0.6);
+  color: white;
+}
+
+/******************************
 TREEHOUSE BADGES / POINTS
 ******************************/
 
