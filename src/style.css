@@ -54,15 +54,17 @@ NAVIGATION
 }
 
 button.navbar-toggler {
-  color: var(--white);
+  color: var(--colorPrim) !important;
 }
 
-.nav-toggler {
-  color: var(--colorPrim);
-  font-size: 30px !important;
-  margin-top: 0;
-  position: absolute;
-  top: 20px;
+i.fa.fa-bars.nav-toggler {
+  background-color: var(--colorPrim);
+  font-size: 100px !important;
+  margin-top: 10px;
+  height: 8px;
+  width: 30px;
+  border-radius: 3px;
+  display: block;
 }
 
 /******************************
@@ -261,4 +263,17 @@ FOOTER
 .social-links a:hover {
   opacity: 0.6;
   text-decoration: none;
+}
+
+@media screen and (max-width: 992px) {
+
+  .navbar {
+    justify-content: flex-start;
+  }
+
+  .navbar-nav {
+    padding: 20px;
+    margin-left: 10px;
+  }
+
 }

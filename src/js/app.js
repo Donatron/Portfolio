@@ -158,6 +158,11 @@ $(document).ready(function() {
     console.log('This line is evaluating');
   }
 
+  $('.skills-card').hover(function() {
+    var devicon = $(this).
+    $(this).css('background-color', 'black');
+  })
+
   // Init Scroll ScrollMagic
   // var controller = new ScrollMagic.Controller();
   //
