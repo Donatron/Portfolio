@@ -39,10 +39,12 @@ h1 {
   width: auto;
   margin: 30px 0;
   z-index: 1000;
+  border: 0;
 }
 
 .svg-profile {
   margin-top: -105px;
+  border: 0;
 }
 
 @keyframes spin {
@@ -292,7 +294,7 @@ FOOTER
 @media screen and (max-width: 575px) {
   .svg {
     height: 100px !important;
-    margin: 15px 0;
+    margin: 20px 0;
   }
 
   .svg-profile {
