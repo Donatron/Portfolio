@@ -33,6 +33,13 @@ $(document).ready(function() {
     $('#myNavbar').css('background-color', 'pink');
   });
 
+  $('.skills-card').hover(function() {
+    $(this).find('i.colored').toggleClass('colored');
+  }, function() {
+    $(this).find('i').addClass('colored');
+  }
+);
+
 
   // Create functions to build HTML elements for displaying Treehouse badge and points information
   function createBadgesHeadingHTML($total) {

@@ -37,10 +37,12 @@ h1 {
 .svg {
   height: 150px;
   width: auto;
-  margin-top: -105px;
-  margin-bottom: 30px;
-
+  margin: 30px 0;
   z-index: 1000;
+}
+
+.svg-profile {
+  margin-top: -105px;
 }
 
 @keyframes spin {
@@ -193,8 +195,9 @@ TREEHOUSE BADGES / POINTS
 }
 
 .treehouse-points:hover {
-  background-color: var(--lightGrey);
-  color: var(--colorPrim);
+  background-color: rgba(255, 84, 71, 0.8);
+  color: var(--white);
+  border-radius: 50%;
 }
 
 .treehouse-points h4{
@@ -284,4 +287,15 @@ FOOTER
     margin-left: 10px;
   }
 
+}
+
+@media screen and (max-width: 575px) {
+  .svg {
+    height: 100px !important;
+    margin: 15px 0;
+  }
+
+  .svg-profile {
+    margin-top: -80px;
+  }
 }
