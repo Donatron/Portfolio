@@ -5,7 +5,7 @@ var postcss = require('gulp-postcss');
 var imagemin = require('gulp-imagemin');
 var cssnano = require('cssnano');
 var cssnext = require('postcss-cssnext');
-var browserSync = require('browser-sync');
+// var browserSync = require('browser-sync');
 var browserify = require('browserify');
 var minify = require('gulp-minify');
 
@@ -44,21 +44,21 @@ gulp.task('imagemin', function() {
   .pipe(gulp.dest('img'))
 });
 
-// Configure the browserSync task
-gulp.task('browserSync', function() {
-  browserSync.init({
-    server: {
-      baseDir: ''
-    },
-  })
-});
-
-// Dev task with browserSync
-gulp.task('dev', ['browserSync'], function() {
-  // Reloads the browser whenever HTML or CSS files change
-  gulp.watch('src/*.css', browserSync.reload);
-  gulp.watch('*.html', browserSync.reload);
-});
+// // Configure the browserSync task
+// gulp.task('browserSync', function() {
+//   browserSync.init({
+//     server: {
+//       baseDir: ''
+//     },
+//   })
+// });
+//
+// // Dev task with browserSync
+// gulp.task('dev', ['browserSync'], function() {
+//   // Reloads the browser whenever HTML or CSS files change
+//   gulp.watch('src/*.css', browserSync.reload);
+//   gulp.watch('*.html', browserSync.reload);
+// });
 
 // Browserify for using Node.js in the browser
 var bundle = browserify('./src/js/app.js').bundle();
