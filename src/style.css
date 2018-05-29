@@ -1,6 +1,7 @@
 :root {
   --colorPrim: #17a2b8;
   --colorSec: #026877;
+  --colorTer: #FF5447;
   --white: #fff;
   --grey: #333;
   --lightGrey: #ccc;
@@ -31,6 +32,17 @@ h1 {
   width: 80px;
   height: 80px;
   animation: spin 1s linear infinite;
+}
+
+.svg {
+  height: 150px;
+  width: auto;
+  margin: 30px 0;
+  z-index: 1000;
+}
+
+.svg-profile {
+  margin-top: -105px;
 }
 
 @keyframes spin {
@@ -78,8 +90,6 @@ JUMBOTRON
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-
-  z-index: 1;
 }
 
 .devicon {
@@ -104,7 +114,7 @@ PORTFOLIO
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--colorPrim);
+  background-color: var(--colorTer);
   opacity: 0;
 
   transition-duration: 0.5s;
@@ -146,7 +156,7 @@ SkillS
 .skills-card:hover {
   border-radius: 50%;
   transition: all 0.3s ease-out;
-  background-color: rgba(23, 162, 186, 0.6);
+  background-color: rgba(255, 84, 71, 0.8);
   color: white;
 }
 
@@ -185,8 +195,9 @@ TREEHOUSE BADGES / POINTS
 }
 
 .treehouse-points:hover {
-  background-color: var(--lightGrey);
-  color: var(--colorPrim);
+  background-color: rgba(255, 84, 71, 0.8);
+  color: var(--white);
+  border-radius: 50%;
 }
 
 .treehouse-points h4{
@@ -276,4 +287,15 @@ FOOTER
     margin-left: 10px;
   }
 
+}
+
+@media screen and (max-width: 575px) {
+  .svg {
+    height: 100px !important;
+    margin: 15px 0;
+  }
+
+  .svg-profile {
+    margin-top: -80px;
+  }
 }
