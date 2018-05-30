@@ -59,6 +59,7 @@ NAVIGATION
 .navbar {
   padding-top: 0;
   padding-bottom: 0;
+  z-index: 10;
 }
 
 .nav-item {
@@ -174,7 +175,14 @@ TREEHOUSE BADGES / POINTS
 }
 
 .card {
+  padding-top: 30px;
   border: none;
+}
+
+.card:hover {
+  background-color: rgba(255, 84, 71, 0.8);
+  color: var(--white);
+  transition: background-color 0.5s cubic-bezier(.62,0,.52,1);
 }
 
 .treehouse-badge {

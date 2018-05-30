@@ -25,21 +25,21 @@ $(document).ready(function() {
     $('#myNavbar').toggle('collapse');
   });
 
-  $('#myNavbar').sticky({
-    topSpacing: -100
-  })
+  // $('#myNavbar').sticky({
+  //   topSpacing: -100
+  // })
 
   $('#myNavbar').on('sticky-start', function() {
     $('#myNavbar').css('background-color', 'pink');
   });
 
+  // Change color of font-awesome icons to white on hover
   $('.skills-card').hover(function() {
-    $(this).find('i.colored').toggleClass('colored');
-  }, function() {
-    $(this).find('i').addClass('colored');
-  }
-);
-
+      $(this).find('i.colored').toggleClass('colored');
+    }, function() {
+      $(this).find('i').addClass('colored');
+    }
+  );
 
   // Create functions to build HTML elements for displaying Treehouse badge and points information
   function createBadgesHeadingHTML($total) {
@@ -164,11 +164,6 @@ $(document).ready(function() {
   } catch(error) {
     console.log('This line is evaluating');
   }
-
-  $('.skills-card').hover(function() {
-    var devicon = $(this).
-    $(this).css('background-color', 'black');
-  })
 
   // Init Scroll ScrollMagic
   // var controller = new ScrollMagic.Controller();
