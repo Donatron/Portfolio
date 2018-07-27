@@ -33,7 +33,8 @@
 		white-space: nowrap;
 
 		&:hover {
-			background-color: _palette(border-bg);
+			background-color: _palette(border);
+			color: _palette(bg) !important;
 		}
 
 		&:active {
