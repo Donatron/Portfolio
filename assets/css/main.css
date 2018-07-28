@@ -653,11 +653,16 @@ ul.icons {
       height: 2.25rem;
       line-height: 2.25rem;
       text-align: center;
-      width: 2.25rem; }
+      width: 2.25rem;
+      transition: all 0.75s ease-in-out; }
       ul.icons li a:hover {
-        background-color: rgba(255, 255, 255, 0.075); }
+        background-color: #ffffff;
+        color: #1b1f22; }
       ul.icons li a:active {
         background-color: rgba(255, 255, 255, 0.175); }
+    ul.icons li p {
+      color: #ffffff;
+      letter-spacing: 0.2rem; }
 
 /* Table */
 .table-wrapper {
@@ -731,7 +736,8 @@ button,
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  white-space: nowrap; }
+  white-space: nowrap;
+  transition: all 0.325s ease-in-out; }
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   input[type="button"]:hover,
@@ -990,7 +996,8 @@ button {
         text-transform: uppercase;
         letter-spacing: 0.2rem;
         font-size: 0.8rem;
-        border-bottom: 0; }
+        border-bottom: 0;
+        transition: all 0.75s ease-in-out; }
         #header nav ul li a:hover {
           background-color: #ffffff;
           color: #1b1f22; }
@@ -1168,6 +1175,13 @@ button {
   @media screen and (max-width: 480px) {
     #main article {
       padding: 3rem 1.5rem 0.5rem 1.5rem ; } }
+
+.contact-details {
+  display: flex;
+  flex-direction: column; }
+
+.contact-details li:nth-child(2) {
+  margin-top: 2rem; }
 
 /* Footer */
 #footer {

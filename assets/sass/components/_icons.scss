@@ -27,14 +27,21 @@
 				line-height: 2.25rem;
 				text-align: center;
 				width: 2.25rem;
+				transition: all _duration(intro) ease-in-out;
 
 				&:hover {
-					background-color: _palette(border-bg);
+					background-color: _palette(fg);
+					color: _palette(bg);
 				}
 
 				&:active {
 					background-color: _palette(border-bg-alt);
 				}
+			}
+
+			p {
+				color: _palette(fg);
+				letter-spacing: _font(letter-spacing);
 			}
 		}
 	}

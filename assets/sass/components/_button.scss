@@ -31,6 +31,7 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
+		transition: all _duration(article) ease-in-out;
 
 		&:hover {
 			background-color: _palette(border);

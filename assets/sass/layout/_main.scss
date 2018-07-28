@@ -100,3 +100,12 @@
 			}
 		}
 	}
+
+	.contact-details {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contact-details li:nth-child(2) {
+		margin-top: 2rem;
+	}
