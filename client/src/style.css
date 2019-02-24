@@ -16,3 +16,21 @@
 .tech-container .row {
   margin: 1rem 0;
 }
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0 !important;
+  }
+  #name-span {
+    font-size: 1.5rem;
+    padding-top: 0.75em;
+    margin-left: -2em !important;
+  }
+  .navbar-header {
+    margin: 0 !important;
+  }
+  .navbar-logo-img {
+    width: 40px;
+    height: auto;
+  }
+}
