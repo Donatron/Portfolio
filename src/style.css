@@ -1,0 +1,22 @@
+.navbar-logo-img {
+  top: -50px;
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.devicon {
+  font-size: 60px;
+  width: auto;
+  padding: 5px;
+}
+
+.tech-container .devicon,
+.tech-container .row {
+  margin: 1rem 0;
+}
+
+#contact-image {
+  background-image: url("./assets/images/office-window.jpg");
+}
