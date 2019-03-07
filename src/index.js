@@ -42,8 +42,8 @@ const tl = new TimelineMax();
 tl.fromTo(
   nameSpan,
   0.5,
-  { x: -500, y: -40, autoAlpha: 0 },
-  { x: 80, y: -40, autoAlpha: 1 },
+  { x: -500, y: -60, autoAlpha: 0 },
+  { x: 120, y: -60, autoAlpha: 1 },
   "+=0.2"
 )
   .fromTo(profileImage, 0.5, { y: -200 }, { y: 0, ease: Power2.easeInOut })

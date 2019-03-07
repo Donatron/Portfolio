@@ -1,9 +1,10 @@
 .navbar-logo-img {
   top: -50px;
-  width: 60px;
+  width: 100px;
   height: auto;
   border-radius: 50%;
   box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.3);
+  margin-right: 30px;
 }
 
 .devicon {
