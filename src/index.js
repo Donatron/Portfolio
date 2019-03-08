@@ -65,7 +65,7 @@ tl.fromTo(
 aboutLink.addEventListener("click", e => {
   e.preventDefault();
 
-  const target = e.path[0].hash;
+  const target = e.target.getAttribute("href");
 
   jump(target, {
     duration: 500,
@@ -76,7 +76,7 @@ aboutLink.addEventListener("click", e => {
 portfolioLink.addEventListener("click", e => {
   e.preventDefault();
 
-  const target = e.path[0].hash;
+  const target = e.target.getAttribute("href");
 
   jump(target, {
     duration: 500,
@@ -87,7 +87,7 @@ portfolioLink.addEventListener("click", e => {
 contactLink.addEventListener("click", e => {
   e.preventDefault();
 
-  const target = e.path[0].hash;
+  const target = e.target.getAttribute("href");
 
   jump(target, {
     duration: 500,
