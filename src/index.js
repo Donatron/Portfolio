@@ -38,7 +38,6 @@ const navLinks = document.querySelectorAll(".nav li a");
 const tl = new TimelineMax();
 
 // Get Greensock working
-
 tl.fromTo(
   nameSpan,
   0.5,
@@ -98,3 +97,16 @@ contactLink.addEventListener("click", e => {
 /*
  ** End smooth scrolling
  */
+
+// Sort nav-bar collapse show/hide on click
+const navbarCollapse = document.querySelector(".navbar-collapse");
+const navbarLi = document.querySelectorAll(".navbar-right li a");
+
+navbarLi.forEach(element => {
+  addEventListener("click", e => {
+    if (navbarCollapse.classList.contains("in")) {
+      navbarCollapse.classList.remove("in");
+      console.log("click");
+    }
+  });
+});
