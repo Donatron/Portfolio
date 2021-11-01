@@ -83,16 +83,16 @@ portfolioLink.addEventListener("click", e => {
   });
 });
 
-contactLink.addEventListener("click", e => {
-  e.preventDefault();
+// contactLink.addEventListener("click", e => {
+//   e.preventDefault();
 
-  const target = e.target.getAttribute("href");
+//   const target = e.target.getAttribute("href");
 
-  jump(target, {
-    duration: 500,
-    offset: -100
-  });
-});
+//   jump(target, {
+//     duration: 500,
+//     offset: -100
+//   });
+// });
 
 /*
  ** End smooth scrolling

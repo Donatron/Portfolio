@@ -21,3 +21,15 @@
 #contact-image {
   background-image: url("./assets/images/office-window.jpg");
 }
+
+.btn-secondary {
+  color: white;
+  background-color: #1763e9;
+  border-color: #1763e9;
+}
+
+.btn-secondary:hover {
+  color: #1763e9;
+  background-color: transparent;
+  border-color: #1763e9;
+}
