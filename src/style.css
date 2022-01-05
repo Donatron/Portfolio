@@ -33,3 +33,36 @@
   background-color: transparent;
   border-color: #1763e9;
 }
+
+.carousel-inner>.item>img {
+  max-width: 100%;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio-item_details {
+  padding: 15px;
+}
+
+.portfolio-item_details h3 {
+  color: #1763e9;
+}
+
+.portfolio-item_details .btn {
+  margin-top: 30px;
+}
+
+.portfolio-item_details-tech {
+  margin-top: 30px;
+}
+
+.devicon {
+  font-size: 40px;
+}
+
+.card-shadow {
+  border-radius: 5px;
+  overflow: hidden;
+}
