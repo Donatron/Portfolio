@@ -1,5 +1,6 @@
 require("./index.html");
 // Import Legacy CSS and JS files
+require("./site.js");
 require("./mountain.js");
 require("./mountain.css");
 
