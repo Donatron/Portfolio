@@ -1,10 +1,13 @@
 (function () {
+  const experience = require('./data/experience');
+  
   const DOMElements = {
     modal: document.getElementById('portfolioDetailsModal'),
-    modalToggles: document.getElementsByClassName('modal-toggle')
+    modalToggles: document.getElementsByClassName('modal-toggle'),
+    experience: document.getElementById('experience'),
   }
 
-  // Add click event listners to all modal toggle icons
+  // Add click event listeners to all modal toggle icons
   for (let i = 0; i < DOMElements.modalToggles.length; i++) {
     (function (index) {
       DOMElements.modalToggles[index].addEventListener("click", function () {
@@ -77,4 +80,41 @@
     </div>
     `;
   }
+
+  const experienceDetailsHTML = (details) => {
+    let html = '';
+    for (const detail of details) {
+      html += `<li>${detail}</li>`
+    }
+    return html;
+  }
+
+  const experienceHTML = () => {
+    let html = '<h2>Experience</h2>';
+    for (const exp of experience) {
+      const {
+        title,
+        companyName,
+        location,
+        startDate,
+        endDate,
+        isCurrentRole,
+        isContract,
+        details
+      } = exp;
+
+      const expDetails = experienceDetailsHTML(details)
+
+      html += `
+        <div class="col-xs-12 col-md-6">
+          <h6>${title}: ${location}</h6>
+          <i>${startDate} - ${isCurrentRole ? 'Present' : endDate} ${isContract ? '(Contract)' : ''}</i>
+          <ul>${expDetails}</ul>
+        </div>
+      `;
+    }
+    return html;
+  }
+
+  DOMElements.experience.innerHTML = experienceHTML()
 })();
