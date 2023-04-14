@@ -107,7 +107,7 @@
 
       html += `
         <div class="col-xs-12 col-md-6">
-          <h6>${title}: ${location}</h6>
+          <h6>${title}: ${companyName} - ${location}</h6>
           <i>${startDate} - ${isCurrentRole ? 'Present' : endDate} ${isContract ? '(Contract)' : ''}</i>
           <ul>${expDetails}</ul>
         </div>
