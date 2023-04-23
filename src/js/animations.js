@@ -52,7 +52,6 @@ const createSmoothScroll = (element) => {
 
 createSmoothScroll(aboutLink);
 createSmoothScroll(portfolioLink);
-createSmoothScroll(contactLink);
 /*
  ** End smooth scrolling
 */

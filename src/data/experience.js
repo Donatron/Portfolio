@@ -12,7 +12,7 @@ const experience = [
       'Identifying and implementing opportunities for reusable code',
       'Maintaining documentation of breaking changes to API',
       'Creation and maintenance of synthetic tests for UI and API',
-      'Writing unit tests code changes',
+      'Writing unit tests for code changes',
       'Code review of peers work'
     ]
   },

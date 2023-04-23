@@ -7,6 +7,7 @@
   } = require('./DOMElements');
   const {
     experienceHTML,
+    heroHTML,
     modalHTML,
     skillsHTML,
   } = require('./markup');
@@ -27,6 +28,7 @@
         const portfolioItem = setSelectedPortfolioItem(carouselInner);
 
         modal.innerHTML = modalHTML(portfolioItem);
+        modal.style.display = 'flex'
       })
     })(i);
   }
