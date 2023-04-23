@@ -42,6 +42,10 @@
   border-color: #1763e9;
 }
 
+#experience ul li {
+  text-align: left;
+}
+
 .carousel-inner>.item>img {
   max-width: 100%;
 }
